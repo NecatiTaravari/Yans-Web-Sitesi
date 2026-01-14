@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Müzikler - Yansı</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">Yansı</div>
+
+    <nav class="main">
+        <a href="profil.html">Profil</a>
+        <a href="sosyal.html">Akış</a>
+        <a href="filmler.html">Filmler</a>
+        <a href="kitaplar.html">Kitaplar</a>
+        <a href="muzikler.html" class="active">Müzikler</a>
+        <a href="index.html" class="btn">Çıkış</a>
+    </nav>
+</header>
+
+<h1>Müzikler</h1>
+<p class="intro">
+    Sevdiğin müzikleri keşfet ve kullanıcıların yorumlarını incele.
+</p>
+
+<section class="film-grid" id="music-container"></section>
+
+<footer>
+    © 2025 Yansı — Tüm hakları saklıdır.
+    <div class="footer-links">
+        <a href="hakkimizda.html">Hakkımızda</a>
+        <a href="iletisim.html">İletişim</a>
+    </div>
+</footer>
+
+
+<div id="global-panel" class="book-panel">
+    <div class="panel-content">
+
+        <span id="global-close">×</span>
+
+        <img id="global-img">
+
+        <h2 id="global-title"></h2>
+
+        <p id="global-info1"></p>
+        <p id="global-info2"></p>
+        <p id="global-info3"></p>
+
+        <p id="global-description"></p>
+
+        <button id="global-link-btn" class="panel-buy-btn">Bağlantıya Git</button>
+
+        <h3>Puanla</h3>
+        <div class="rating-box" id="global-rating">
+            <span data-star="1">★</span>
+            <span data-star="2">★</span>
+            <span data-star="3">★</span>
+            <span data-star="4">★</span>
+            <span data-star="5">★</span>
+        </div>
+
+        <p id="global-rating-text"></p>
+
+        <h3>Yorumlar</h3>
+        <div id="global-comments"></div>
+
+        <textarea id="global-comment-input" placeholder="Yorum yaz..."></textarea>
+        <button id="global-comment-btn">Yorum Ekle</button>
+
+    </div>
+</div>
+
+
+<script src="javascript/musics.js"></script>
+<script src="javascript/renderMusic.js"></script>
+<script src="javascript/panel.js"></script>
+<script src="javascript/likes.js"></script>
+<script src="javascript/addToProfile.js"></script>
+
+</body>
+</html>

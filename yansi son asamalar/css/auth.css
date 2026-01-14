@@ -1,0 +1,63 @@
+
+body.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #f5eb97, #d0ebb5, #abead3);
+    font-family: 'Quicksand', sans-serif;
+}
+
+.login-kutu{
+        background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(10px);
+    padding: 40px 35px;
+    border-radius: 18px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);   
+}
+
+
+.login-kutu input{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+
+.login-form input:focus {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 2px #ba5653;
+}
+
+
+.login-form button
+{
+    border: none;
+    outline: none;
+}
+
+/* Alt link */
+.to-register {
+    margin-top: 18px;
+    font-size: 14px;
+    color: #333;
+}
+
+.to-register a {
+    color: #ba5653;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.to-register a:hover {
+    color: #dba565;
+}

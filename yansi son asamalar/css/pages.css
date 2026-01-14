@@ -1,0 +1,243 @@
+
+.sayfa {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 80px 20px;
+    text-align: left;
+}
+
+/* Sayfa ana başlık */
+.sayfa h1 {
+    font-size: 48px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #011a4b;
+}
+
+/* Açıklama metni */
+.intro {
+    margin: 0 auto;
+    max-width: 600px;
+    opacity: 0.9;
+    font-size: 19px;
+    text-align: center;
+    margin-bottom: 40px;
+    line-height: 1.6;
+    color: #011a4b;
+}
+
+/* Kutu yapısı */
+.yazi-kutu,
+.iletisim-kutu {
+    background: rgba(255,255,255,0.55);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    line-height: 1.75;
+    font-size: 18px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+    color: #011a4b;
+    margin-top: 20px;
+}
+
+/* Paragraflar */
+.yazi-kutu p,
+.iletisim-kutu p {
+    margin-bottom: 16px;
+}
+
+/* Alt başlıklar */
+.yazi-kutu h2,
+.iletisim-kutu h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #ba5653;
+    font-weight: 700;
+}
+
+.iletisim-form {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.iletisim-form input,
+.iletisim-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.75);
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.iletisim-form input:focus,
+.iletisim-form textarea:focus {
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 0 0 2px #ba5653;
+}
+
+.iletisim-form button {
+    align-self: flex-start;
+    background: #ba5653;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 12px;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.iletisim-form button:hover {
+    background: #d07370;
+    transform: translateY(-2px);
+}
+
+
+
+.book-panel {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(7px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+.book-panel.active {
+    display: flex;
+}
+
+.panel-content {
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(10px);
+    width: 650px;
+    max-height: 90vh;
+    padding: 30px;
+    overflow-y: auto;
+    border-radius: 22px;
+    border: 1px solid rgba(255,255,255,0.4);
+    box-shadow: 0 15px 50px rgba(0,0,0,0.25);
+    animation: panelPop 0.25s ease;
+}
+
+@keyframes panelPop {
+    from { transform: scale(0.8); opacity: 0; }
+    to   { transform: scale(1); opacity: 1; }
+}
+
+#panel-close,
+#panel-close-film {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #222;
+}
+
+.panel-content img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 15px;
+}
+
+.panel-content h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgba(0,0,0,0.1);
+}
+
+
+
+#panel-comments p,
+#film-comments p {
+    background: rgba(240,240,240,0.7);
+    padding: 8px 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+#panel-comment-input,
+#film-comment-input {
+    width: 100%;
+    height: 70px;
+    border-radius: 10px;
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+#panel-comment-btn,
+#film-comment-btn {
+    margin-top: 10px;
+    background: #ba5653;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+
+.rating-box,
+#film-rating {
+    font-size: 32px;
+    display: flex;
+    gap: 10px;
+    margin: 10px 0 5px 0;
+    cursor: pointer;
+}
+
+.rating-box span,
+#film-rating span {
+    color: #ddd;
+    transition: 0.25s;
+}
+
+.rating-box span.active,
+#film-rating span.active,
+.rating-box span:hover,
+#film-rating span:hover {
+    color: gold;
+    transform: scale(1.2);
+}
+
+#rating-text,
+#film-rating-text {
+    margin-top: 5px;
+    font-weight: 600;
+    color: #4d3f72;
+}
+
+.external-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background: #ff9900;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.external-btn:hover {
+    background: #e68a00;
+    transform: translateY(-2px);
+}
+

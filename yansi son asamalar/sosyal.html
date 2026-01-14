@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yansı Sosyal Alan</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/social.css">
+</head>
+
+<body class="social-body">
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="logo">Yansı</div>
+
+        <nav class="main">
+            <a href="profil.html">Profil</a>
+            <a href="sosyal.html" class="active">Akış</a>
+            <a href="filmler.html">Filmler</a>
+            <a href="kitaplar.html">Kitaplar</a>
+            <a href="muzik.html">Müzikler</a>
+            <a href="index.html" class="btn">Çıkış</a>
+        </nav>
+    </header>
+
+
+    <div class="social-container">
+
+        <!-- ORTA AKIŞ -->
+        <main class="feed">
+            <h2>Akış</h2>
+
+            <div class="post-create">
+                <img src="resimler/defaultpfp.png" class="pfp" id="create-pfp">
+
+                <div class="post-box">
+                    <textarea placeholder="Bir şey paylaş..." class="post-text"></textarea>
+
+                    <div class="post-actions">
+                        <select class="kategori-sec">
+                            <option value="">Kategori</option>
+                            <option value="kitap">Kitap</option>
+                            <option value="film">Film</option>
+                            <option value="muzik">Müzik</option>
+                        </select>
+
+                        <input type="file" accept="image/*" class="post-image">
+
+                        <button class="post-btn">Paylaş</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="post-list"></div>
+
+        </main>
+
+        <!-- SAĞ PANEL -->
+        <aside class="right-panel">
+
+            <div class="profile-mini">
+                <img src="resimler/defaultpfp.png" class="pfp" id="mini-pfp">
+                <div>
+                    <strong id="right-username">Kullanıcı</strong>
+                    <p id="right-handle">@kullanici</p>
+                </div>
+            </div>
+
+            <div class="trend-box">
+                <h3>Trendler</h3>
+                <p>#Yansı</p>
+                <p>#FilmÖnerileri</p>
+                <p>#KitapTavsiyeleri</p>
+                <p>#MüzikListem</p>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- JS -->
+    <script src="javascript/app.js"></script>
+    <script src="javascript/post.js"></script>
+    <script src="javascript/likes.js"></script>
+
+    <!-- Kullanıcı adı -->
+    <script>
+        const user = localStorage.getItem("yansikullanici") || "Anonim";
+        document.getElementById("right-username").textContent = user;
+        document.getElementById("right-handle").textContent = "@" + user;
+    </script>
+
+    <!-- PROFIL FOTOĞRAFI TÜM SOSYAL SAYFADA UYGULA -->
+    <script>
+        function applyProfilePhoto() {
+            const savedPfp = localStorage.getItem("pfp_yansikullanici");
+            if (!savedPfp) return;
+
+            document.querySelectorAll(".pfp").forEach(img => {
+                img.src = savedPfp;
+            });
+        }
+
+        applyProfilePhoto();
+    </script>
+
+</body>
+</html>
